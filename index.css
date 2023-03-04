@@ -1,9 +1,10 @@
 .song-container{
-    margin:2rem;
+    margin:8rem;
 }
 
 audio{
     display:block;
-    padding:2rem 0;
+    padding:4rem 0;
+    
 }
 
