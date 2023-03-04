@@ -1,0 +1,9 @@
+.song-container{
+    margin:2rem;
+}
+
+audio{
+    display:block;
+    padding:2rem 0;
+}
+
