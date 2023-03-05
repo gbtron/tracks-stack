@@ -5,15 +5,62 @@
 </head>
 <body>
     <header>Track</header>
-    <div className='song-container'>
-	<audio controls src="./falling-cards.wav"> </audio>
+    <div class='song-container'>
+	<audio controls > </audio>
 	<img 
-	    src="./falling-cards-img.jpg"
-	    alt='jar with eye'
+	    alt='artwork, should there be'
 	    height=300
 	    width=300
 	>
     </div>
+    <button class='previousTrack'>
+	Previous
+    </button>
+    <button class='nextTrack hide'>
+	Next
+    </button>
     <footer>This content is not copyrighted</footer>
+
+    <script>
+	let songs = [
+	{
+	    name:'cleared it', 
+	    filepath: './cleared-it.wav'    
+	},
+	{
+	    name: 'falling cards',
+	    filepath: './falling-cards.wav',
+	    imageFilepath: './falling-cards-img.jpg'
+	}]
+	let currentSongIndex = 0
+	
+	const previousButton = document.querySelector('button.previousTrack')
+	const nextButton= document.querySelector('button.nextTrack')
+	const audioPlayer = document.querySelector('audio')
+	const songImage = document.querySelector('img')
+
+	audioPlayer.setAttribute('src', songs[currentSongIndex].filepath)
+	previousButton.onclick = ()=>{
+	    currentSongIndex ++
+	    audioPlayer.setAttribute('src', songs[currentSongIndex].filepath)
+	    songImage.setAttribute('src', songs[currentSongIndex].imageFilepath)
+	    nextButton.setAttribute('class', 'nextTrack')
+	    if (currentSongIndex===songs.length-1){
+		console.log('nextButton: ', nextButton)
+		previousButton.setAttribute('class', 'previousTrack hide')
+	    }
+	}
+	nextButton.onclick = () => {
+	    currentSongIndex --
+	    audioPlayer.setAttribute('src', songs[currentSongIndex].filepath)
+	    songImage.setAttribute('src', songs[currentSongIndex].imageFilepath)
+	    previousButton.setAttribute('class', 'previousTrack')
+	    if (currentSongIndex===0){
+		console.log('nextButton: ', nextButton)
+		nextButton.setAttribute('class', 'nextTrack hide')
+	    }
+	}
+    </script>
 </body>
 </html>
+
