@@ -2,7 +2,7 @@ export const songs = [
     {
 	name: 'DRACULA', 
 	filepath: './dracula.wav'
-    }
+    },
     {
         name: 'thru traffic',
         filepath: './thru-traffic.wav'
