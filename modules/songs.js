@@ -1,7 +1,8 @@
 export const songs = [
     {
 	name: 'wavelength', 
-	filepath:'./wavelength.wav'
+	filepath:'./wavelength.wav',
+	imageFilepath:'./wavelength.jpg'
     },
     {
 	name: 'DRACULA', 
