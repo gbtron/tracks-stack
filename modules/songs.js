@@ -1,5 +1,9 @@
 export const songs = [
     {
+	name: 'wavelength', 
+	filepath:'./wavelength.wav'
+    },
+    {
 	name: 'DRACULA', 
 	filepath: './dracula.wav'
     },
